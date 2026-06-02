@@ -18,7 +18,7 @@ The product should show `Pending` or `Partial` states rather than invent values 
 
 ## Where is the source of truth?
 
-`portfolio-architect` owns project state, ADRs, specs, Work Items, version manifest, and framework memory. `portfolio-docs` is the public documentation surface.
+`portfolio-architect` owns project state, ADRs, specs, local Work Item state, version manifest, and framework memory. `portfolio-docs` is the public documentation surface.
 
 ## Can public docs show real sample account numbers?
 

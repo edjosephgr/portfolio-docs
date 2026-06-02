@@ -1,6 +1,7 @@
 node_modules/
 .docusaurus/
 build/
+wiki-dist/
 .env
 .env.*
 !.env.example

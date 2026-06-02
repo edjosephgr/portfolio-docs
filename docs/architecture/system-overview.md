@@ -37,4 +37,4 @@ flowchart LR
 - The mobile app uses Expo, React Native, Expo Router, TypeScript, and TanStack Query.
 - The database uses PostgreSQL SQL migrations and PowerShell operational scripts.
 - Local infrastructure uses Docker Compose and PowerShell scripts.
-- Project governance uses Markdown, ADRs, Spec Kit Work Items, GitHub issues, GitHub Projects, and a version manifest.
+- Project governance uses Markdown, ADRs, local Spec Kit Work Items, GitHub issue references, and a version manifest.

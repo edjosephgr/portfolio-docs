@@ -33,7 +33,7 @@ Portfolio Tracker is read-only:
 Auditability comes from:
 
 - Spec Kit Work Items
-- GitHub issues and Project fields
+- GitHub issue references
 - PRs and Conventional Commits
 - ADRs
 - Changelogs

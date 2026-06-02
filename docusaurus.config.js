@@ -8,7 +8,15 @@ const config = {
   onBrokenLinks: 'throw',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'es'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      es: {
+        label: 'Español',
+      },
+    },
   },
   markdown: {
     mermaid: true,
@@ -37,6 +45,10 @@ const config = {
       title: 'Portfolio Tracker Docs',
       items: [
         { to: '/', label: 'Docs', position: 'left' },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           href: 'https://github.com/edjosephgr/portfolio-docs',
           label: 'GitHub',

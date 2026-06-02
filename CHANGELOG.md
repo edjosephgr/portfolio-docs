@@ -8,8 +8,13 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 
 ### Added
 
+- Add Spanish Docusaurus i18n, GitHub Pages deployment workflow, and wiki sync generation.
 - Add public Docusaurus documentation for Portfolio Tracker architecture, data flow, integration points, security, data handling, compliance, guides, roadmap, glossary, and framework workflow.
 - Add mandatory repo governance files for `portfolio-docs`.
+
+### Changed
+
+- Align public workflow documentation with local-only Work Item state.
 
 ## [0.1.0] - 2026-06-02
 
