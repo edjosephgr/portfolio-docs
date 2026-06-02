@@ -1,0 +1,10 @@
+flowchart LR
+  User["Authenticated user"] --> Mobile["portfolio-mobile"]
+  Mobile --> API["portfolio-api"]
+  API --> DB["PostgreSQL"]
+  API --> Market["Adjusted market data"]
+  API --> Chat["Descriptive chat boundary"]
+  Infra["portfolio-infrastructure"] --> API
+  Infra --> DB
+  Architect["portfolio-architect"] --> Governance["Specs, ADRs, Work Items, Skills"]
+  Docs["portfolio-docs"] --> User
