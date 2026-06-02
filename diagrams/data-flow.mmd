@@ -1,0 +1,12 @@
+sequenceDiagram
+  participant User
+  participant App as Mobile/Web App
+  participant API
+  participant DB as PostgreSQL
+  participant Market as Market Data
+
+  User->>App: Request dashboard
+  App->>API: Authenticated API request
+  API->>DB: Scoped query by user and portfolio
+  API->>Market: Read adjusted daily close rows
+  API-->>App: Descriptive metrics and audit breakdowns
