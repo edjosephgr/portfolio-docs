@@ -5,6 +5,7 @@
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "build:wiki": "node scripts/build-wiki.mjs",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear"
   },

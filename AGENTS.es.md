@@ -3,7 +3,7 @@
 ## Punto de entrada
 
 - Este repo es solo documentacion publica; no agregue comportamiento runtime del producto desde aqui.
-- Antes de cambios sustanciales de documentacion, confirme un Work Item en `portfolio-architect/specs/*/tasks.md` y un GitHub Work Item issue en estado `Ready`.
+- Antes de cambios sustanciales de documentacion, confirme un Work Item en `portfolio-architect/specs/*/tasks.md` con `Status: Ready` local y una referencia GitHub Work Item issue. No use labels, estado del issue ni campos Project de GitHub como fuente del estado de ejecucion.
 - Lea `portfolio-architect/PROJECT_STATE.md` para cambios de arquitectura, workflow, stack, pruebas, despliegue, estrategia de lenguaje de documentacion, release/versioning, gobernanza del framework o supuestos entre repos.
 - Use `portfolio-architect/codex/skills` para pasos de workflow de lifecycle, especialmente `portfolio-track-work-item`, `portfolio-update-docs` y `portfolio-validate-compliance`.
 
@@ -24,6 +24,7 @@
 
 - Use ramas `codex/NNN-MMM-short-slug`.
 - Cada PR referencia exactamente un GitHub Work Item issue principal y su Spec Reference.
+- Antes de abrir un PR, valide el trabajo, actualice el estado Work Item local en `portfolio-architect` a `Done` e incluya ese cambio como commit final en el mismo workstream.
 - Use Conventional Commits para commits y titulos de PR.
 - Actualice `CHANGELOG.md` para cambios de documentacion o gobernanza.
 

@@ -25,7 +25,7 @@ This public guide explains the ecosystem at a high level. Internal setup details
 
 ## Change Workflow
 
-Every substantial change starts from a governed Work Item. Public documentation changes also need Work Item traceability when they alter architecture, security, compliance, workflow, or published project state.
+Every substantial change starts from a governed local Work Item with a GitHub issue reference. Public documentation changes also need Work Item traceability when they alter architecture, security, compliance, workflow, or published project state.
 
 ## Validation Overview
 

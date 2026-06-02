@@ -1,0 +1,56 @@
+name: Sync public wiki
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build wiki mirror
+        run: npm run build:wiki
+
+      - name: Clone wiki
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git clone "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" wiki || {
+            mkdir wiki
+            git -C wiki init
+            git -C wiki remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git"
+          }
+
+      - name: Copy generated pages
+        run: |
+          find wiki -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -R wiki-dist/. wiki/
+
+      - name: Commit and push wiki changes
+        run: |
+          git -C wiki config user.name "github-actions[bot]"
+          git -C wiki config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C wiki add -A
+          if git -C wiki diff --cached --quiet; then
+            echo "Wiki is already up to date."
+          else
+            git -C wiki commit -m "docs: sync public wiki"
+            git -C wiki push origin HEAD:master
+          fi
