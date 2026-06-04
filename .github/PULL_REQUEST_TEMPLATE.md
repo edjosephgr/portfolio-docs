@@ -18,7 +18,8 @@ Explain the motivation or issue being addressed.
 - [ ] Public-safe content reviewed
 - [ ] `npm run build`
 - [ ] `git diff --check`
-- [ ] Work Item status transitions applied
+- [ ] Work Item was `Ready` before execution and is marked `Done` locally before PR
+- [ ] Sub-Agent delegation artifacts included, if this PR is part of orchestrated work
 
 ## Public Safety
 
