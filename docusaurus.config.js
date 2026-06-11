@@ -1,8 +1,8 @@
 const config = {
   title: 'Portfolio Tracker Docs',
   tagline: 'Public documentation for a read-only personal portfolio tracker',
-  url: 'https://edjosephgr.github.io',
-  baseUrl: '/portfolio-docs/',
+  url: 'https://docs.portfolio-tracker.us',
+  baseUrl: '/',
   organizationName: 'edjosephgr',
   projectName: 'portfolio-docs',
   onBrokenLinks: 'throw',
