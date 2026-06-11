@@ -16,6 +16,7 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 ### Changed
 
 - Align public workflow documentation with local-only Work Item state.
+- Publish Docusaurus from the custom documentation domain root.
 
 ## [0.1.0] - 2026-06-02
 
