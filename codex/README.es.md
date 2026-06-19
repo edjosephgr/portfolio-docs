@@ -10,11 +10,14 @@ Abra el `SKILL.md` central relevante antes de ejecutar estos pasos:
 
 | Paso | Skill |
 |------|-------|
+| Cada proceso ejecutado por agentes antes de implementación, validación, actualización de PR o publicación | `portfolio-release-version` |
 | Orquestación Master/Sub-Agent, child tasks docs delegados o solicitudes cross-agent | `portfolio-orchestrate-agents` |
 | Inicio de Work Item, preparación de PR, fixes de review o closeout de merge | `portfolio-track-work-item` |
 | Validación de compliance y public-safety | `portfolio-validate-compliance` |
 | Actualizaciones de documentación y memoria | `portfolio-update-docs` |
 | Version bumps, releases, tags o manifests coordinados | `portfolio-release-version` |
+
+`portfolio-release-version` es obligatoria para cada proceso ejecutado por agentes incluso cuando no se espera bump de versión; úsela para registrar la versión objetivo o una decisión explícita de no-release antes de readiness de PR.
 
 ## Rutas de documentación
 

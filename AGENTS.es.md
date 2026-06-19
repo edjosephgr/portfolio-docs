@@ -6,6 +6,7 @@
 - Antes de cambios sustanciales de documentacion, confirme un Work Item en `portfolio-architect/specs/*/tasks.md` con `Status: Ready` local y una referencia GitHub Work Item issue. No use labels, estado del issue ni campos Project de GitHub como fuente del estado de ejecucion.
 - Lea `portfolio-architect/PROJECT_STATE.md` para cambios de arquitectura, workflow, stack, pruebas, despliegue, estrategia de lenguaje de documentacion, release/versioning, gobernanza del framework o supuestos entre repos.
 - Use `portfolio-architect/codex/skills` para pasos de workflow de lifecycle, especialmente `portfolio-orchestrate-agents`, `portfolio-track-work-item`, `portfolio-update-docs` y `portfolio-validate-compliance`.
+- Cargue siempre `portfolio-architect/codex/skills/portfolio-release-version/SKILL.md` al inicio de cada proceso ejecutado por agentes, antes de implementación, validación, actualizaciones de PR o publicación. Esta compuerta es obligatoria incluso cuando no se espera bump de versión; lleve una versión objetivo o decisión explícita de no-release hasta readiness de PR.
 - Use `codex/README.md` para enrutar tareas de documentacion a la memoria public-safe correcta.
 
 ## Identidad del agente
@@ -33,6 +34,7 @@ Usted posee la documentación pública dentro de `portfolio-docs`. Acepte child 
 - Cada PR referencia exactamente un GitHub Work Item issue principal y su Spec Reference.
 - Antes de abrir un PR, valide el trabajo, actualice el estado Work Item local en `portfolio-architect` a `Done` e incluya ese cambio como commit final en el mismo workstream.
 - Use `portfolio-orchestrate-agents` para child tasks docs delegados, solicitudes cross-agent y reportes de completion/blocker.
+- Use `portfolio-release-version` para cada tarea y cada actualización de PR, no solo version bumps o releases. Cada PR debe registrar una decisión de bump/manifest de versión o una decisión explícita de no-release.
 - Use Conventional Commits para commits y titulos de PR.
 - Actualice `CHANGELOG.md` para cambios de documentacion o gobernanza.
 

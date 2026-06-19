@@ -6,6 +6,7 @@
 - Before substantial documentation changes, confirm one Work Item in `portfolio-architect/specs/*/tasks.md` with local `Status: Ready` and one GitHub Work Item issue reference. Do not use GitHub labels, issue state, or Project fields as the execution state source.
 - Read `portfolio-architect/PROJECT_STATE.md` for architecture, workflow, stack, testing, deployment, documentation language strategy, release/versioning, framework governance, or cross-repo assumption changes.
 - Use `portfolio-architect/codex/skills` for lifecycle workflow steps, especially `portfolio-orchestrate-agents`, `portfolio-track-work-item`, `portfolio-update-docs`, and `portfolio-validate-compliance`.
+- Always load `portfolio-architect/codex/skills/portfolio-release-version/SKILL.md` at the start of every agent-run process, before implementation, validation, PR updates, or publication. This gate is mandatory even when no version bump is expected; carry a target version or explicit no-release decision through PR readiness.
 - Use `codex/README.md` to route documentation tasks to the correct public-safe memory.
 
 ## Agent Identity
@@ -33,6 +34,7 @@ You own public documentation within `portfolio-docs`. Accept delegated child tas
 - Each PR references exactly one primary GitHub Work Item issue and its Spec Reference.
 - Before opening a PR, validate the work, update the local Work Item status in `portfolio-architect` to `Done`, and include that status update as the final commit in the same workstream.
 - Use `portfolio-orchestrate-agents` for delegated docs child tasks, cross-agent requests, and completion/blocker reports.
+- Use `portfolio-release-version` for every task and every PR update, not only version bumps or releases. Each PR must record a version bump/manifest decision or an explicit no-release decision.
 - Use Conventional Commits for commits and PR titles.
 - Update `CHANGELOG.md` for documentation or governance changes.
 
