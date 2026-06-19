@@ -18,6 +18,7 @@ Explain the motivation or issue being addressed.
 - [ ] Public-safe content reviewed
 - [ ] `npm run build`
 - [ ] `git diff --check`
+- [ ] `portfolio-release-version` loaded for this agent process and release/no-release decision recorded
 - [ ] Work Item was `Ready` before execution and is marked `Done` locally before PR
 - [ ] Sub-Agent delegation artifacts included, if this PR is part of orchestrated work
 

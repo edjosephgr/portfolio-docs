@@ -15,6 +15,7 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 
 ### Changed
 
+- Require `portfolio-release-version` at the start of every agent-run process and require PRs to record a version or no-release decision.
 - Align public workflow documentation with local-only Work Item state.
 - Publish Docusaurus from the custom documentation domain root.
 
